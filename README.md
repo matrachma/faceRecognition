@@ -57,3 +57,9 @@ image_id int primary autoincrement
 image_url varchar(2083)
 image_result varchar(255)
 ```
+
+When you use it for the first time, model weights are downloaded and stored in **./recognizer/pretrained_models** folder.
+Or you can download it directly from:
+```
+https://github.com/matrachma/faceRecognition/releases/download/V1.0/weights.18-4.06.hdf5
+```
