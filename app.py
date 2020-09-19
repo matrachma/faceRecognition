@@ -49,8 +49,8 @@ def job(face):
 
 def main():
     face = FaceCV(depth=16, width=8)
-    run_at_time = os.getenv('RUN_AT_TIME', "21:52")
-    schedule.every().day.at(run_at_time).do(job(face))
+    run_at_time = os.getenv('RUN_AT_TIME', "00:27")
+    schedule.every().day.at(run_at_time).do(job, face)
 
     while True:
         schedule.run_pending()
