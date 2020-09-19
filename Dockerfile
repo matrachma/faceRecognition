@@ -65,4 +65,4 @@ ADD requirements.txt /code/
 RUN pip install -r requirements.txt
 ADD . /code/
 
-ENTRYPOINT /bin/bash
+CMD ["python", "app.py"]

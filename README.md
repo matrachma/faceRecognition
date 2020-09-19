@@ -40,10 +40,15 @@ docker pull matrachma/face-recognition:latest
 ```
 That will do pulling a docker image to your local machine. Next:
 ```
-docker run -d --restart always --name faceRecognition -v ${pwd}:/code/ -e DB_HOST=your_mysql_host -e DB_USER=your_db_username -e DB_PASSWORD=your_db_user_password -e DB_NAME=youd_db_name RUN_AT_TIME=at_what_time_will_run_everyday matrachma/face-recognition:latest python app.py
+docker run -it -d --restart always --name faceRecognition -e DB_HOST=your_mysql_host -e DB_USER=your_db_username -e DB_PASSWORD=your_db_user_password -e DB_NAME=youd_db_name -e RUN_AT_TIME=at_what_time_will_run_everyday matrachma/face-recognition:latest
 ```
 That command will run a docker container with name `faceRecognition` in background, and will start automatically every time your machine turned on.
 To prevent start automatically, just remove `--restart always` flag when run the container.
+
+To see the logs, execute this command:
+```
+docker logs -f faceRecognition
+```
 
 To stop container and remove the container, you can do this with:
 ```
