@@ -5,12 +5,12 @@ Python-based face recognition, currently can recognize age and gender of faces.
 - Python3.5
 - numpy 1.14.2
 - Keras 2.0.8+
-- TensorFlow 1.4.0
+- TensorFlow 1.8.0
 - opencv 3.4.1+
 
 ## Run & build manually
 Tested on:
-- Ubuntu 20.04 with Tensorflow 1.4.0
+- Ubuntu 20.04 with Tensorflow 1.8.0
 
 ### install requirements
 ```
