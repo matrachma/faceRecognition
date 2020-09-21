@@ -11,7 +11,7 @@ class FaceCV(object):
     """
     CASE_PATH = "recognizer/pretrained_models/default.xml"
     MODEL_PATH = os.path.join(os.getcwd(), "recognizer/pretrained_models")
-    WRN_WEIGHTS_PATH = "https://github.com/matrachma/faceRecognition/releases/download/V1.0/weights.18-4.06.hdf5"
+    WRN_WEIGHTS_PATH = "https://github.com/matrachma/faceRecognition/releases/download/v1/weights.18-4.06.hdf5"
 
     def __new__(cls, weight_file=None, depth=16, width=8, face_size=64):
         if not hasattr(cls, 'instance'):
