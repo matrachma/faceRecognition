@@ -50,6 +50,7 @@ def job(face):
 def main():
     face = FaceCV(depth=16, width=8)
     run_at_time = os.getenv('RUN_AT_TIME', "00:27")
+    schedule.every(10).minutes.do(job, face)
     schedule.every().day.at(run_at_time).do(job, face)
 
     while True:
